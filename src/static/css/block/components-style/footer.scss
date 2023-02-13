@@ -1,0 +1,175 @@
+footer
+{
+  a
+  {
+    font-size: $fs
+  }
+}
+.footer-top
+{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 50px 70px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #E3E3E3;
+  border-bottom: 1px solid #E3E3E3;
+  @include l
+  {
+    padding: 50px 54px;
+  }
+  @include xm
+  {
+    display: block;
+    padding: 0;
+  }
+}
+.footer-block
+{
+
+}
+.socials-block-m
+{
+  display: none;
+  @include l
+  {
+    display: block;
+  }
+  @include xm
+  {
+    display: none;
+  }
+}
+.socials-block-l
+{
+  @include l
+  {
+    display: none;
+  }
+  @include xm
+  {
+    display: block;
+  }
+}
+.footer-block-name
+{
+  margin-bottom: 30px;
+  span
+  {
+    font-size: $fm;
+    @include xm
+    {
+      font-size: $fs;
+    }
+  }
+  @include xm
+  {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 17px 15px;
+  }
+}
+.footer-block-content
+{
+  ul
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+  }
+  @include xm
+  {
+    padding: 0 15px;
+    display: none;
+  }
+}
+.contact-info
+{
+
+}
+.contact-info-key
+{
+  margin-bottom: 10px;
+  span
+  {
+    font-size: $fs
+  }
+}
+.contact-info-value
+{
+  span
+  {
+    font-size: $fs
+  }
+}
+.footer-block-socials
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include xm
+  {
+    display: none
+  }
+}
+.footer-bottom
+{
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @include xm
+  {
+    gap: 20px;
+  }
+}
+.footer-botttom-block
+{
+  display: flex;
+  justify-content: center;
+  span, a
+  {
+    font-size: $fs;
+    @include xm
+    {
+      display: block;
+    }
+  }
+  a
+  {
+    @include xm
+    {
+      color: $colorGreen
+    }
+  }
+  @include xm
+  {
+    display: block;
+    padding: 0 24px;
+    text-align: center;
+  }
+}
+.footer-botttom-block-link
+{
+  @include xm
+  {
+    margin-bottom: 8px
+  }
+}
+.footer-botttom-block-line
+{
+  @include xm
+  {
+    display: none !important;
+  }
+}
+.arrow-footer
+{
+  display: none;
+  @include xm
+  {
+    display: flex;
+    align-items: center;
+  }
+}

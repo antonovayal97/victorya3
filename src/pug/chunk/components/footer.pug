@@ -1,0 +1,86 @@
+footer
+  .footer-top
+    .footer-block
+      .footer-block-name
+        span Контактные данные
+        .arrow-footer
+          +icon('arrowfooter')
+      .footer-block-content
+        ul
+          li
+            .contact-info
+              .contact-info-key
+                span Телефон
+              .contact-info-value
+                span  +7 4112-40-11-11
+          li
+            .contact-info
+              .contact-info-key
+                span Эл. почта
+              .contact-info-value
+                span  Info@victoria-mebel.ru
+          li
+            a(href="#") Написать нам
+      .footer-block.socials-block-m
+        .footer-block-name
+          span Мы в соц. сетях
+        .footer-block-socials
+          a(href="#")
+            +icon('whatsapp')
+          a(href="#")
+            +icon('vk')
+          a(href="#")
+            +icon('telegram')
+    .footer-block
+      .footer-block-name
+        span Для покупателей
+        .arrow-footer
+          +icon('arrowfooter')
+      .footer-block-content
+        ul
+          each val in ['Доставка','Сборка товара','Способ оплаты','Условия кредитования','Гарантийные обязательства','Программа лоялбности','Обмен и возврат']
+            li
+              a(href="#")=val
+    .footer-block
+      .footer-block-name
+        span Контактные данные
+        .arrow-footer
+          +icon('arrowfooter')
+      .footer-block-content
+        ul
+          li
+            a(href="#") Вакансии
+          li
+            .contact-info
+              .contact-info-key
+                span Телефон
+              .contact-info-value
+                span  +7 914 270 33 72
+          li
+            .contact-info
+              .contact-info-key
+                span Эл. почта
+              .contact-info-value
+                span  personal@victoria-mebel.ru
+    .footer-block.socials-block-l
+      .footer-block-name
+        span Мы в соц. сетях
+        .arrow-footer
+          +icon('arrowfooter')
+      .footer-block-socials
+        a(href="#")
+          +icon('whatsapp')
+        a(href="#")
+          +icon('vk')
+        a(href="#")
+          +icon('telegram')
+  .footer-bottom
+    .footer-botttom-block
+      span Сеть мебельных салонов "Виктория"
+      span 2014-2022 © Все права защищены |
+      span
+        a(href="#") www.victoria-mebel.ru
+    .footer-botttom-block
+      a(href="#").footer-botttom-block-link Пользовательское соглашение
+      span.footer-botttom-block-line  |
+      a(href="#").footer-botttom-block-link Политика конфиденциальности

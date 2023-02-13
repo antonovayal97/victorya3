@@ -1,0 +1,156 @@
+header
+  .header-with-line
+    .top-header
+      .top-header-first
+        a(href="./").logo
+          include ../../../static/img/logo.svg
+        .links
+          ul
+            each val in ['Контакты', 'Мебель на заказ', 'Доставка в улус']
+              if val == 'Доставка в улус'
+                li
+                  a(href="#" data-hystmodal="#deliveryulus")=val
+              else
+                li
+                  a(href="#")=val
+      .top-header-second
+        .contact
+          span Якутск +7(4112) 40-11-11
+        .top-header-icons
+          a(href="#").icon-link.search-link
+            +icon('search')
+          //
+            <a href="#" data-hystmodal="#signin" class="icon-link account-link"></a>
+          a(href="./account.html").icon-link.account-link
+            +icon('user')
+          a(href="./cart.html").icon-link.cart-link
+            .icon-link-circle
+              span 2
+            +icon('cart')
+          .icon-link.menu-link
+            +icon('menubtn')
+  .header-with-line
+    .bottom-header
+      .header-menu
+        ul
+          each link in ['Мягкая мебель','Прихожая','Гостинная','Кухня','Спальня','Детская мебель','Шкафы и комоды','Офисная мебель','Акции']
+            li
+              a(href="#")=link
+  .menu-slided
+    .menu-slided-search
+      input(type="text" placeholder="Поиск")
+      .level-btn.menu-close
+        +icon('closemenu')
+    .menu-slided-items
+      ul
+        li
+          a(href="#" class="active-slider-menu active-slider-menu-active") Меню
+        li
+          a(href="#" class="active-slider-menu-contact") Контакты
+        li
+          a(href="#") Мебель на заказ
+        li
+          a(href="#" data-hystmodal="#deliveryulus") Доставка в улусы
+    .menu-slided-ul-acc-wrap
+      ul.menu-slided-ul
+        each menuslide in [{name: 'Мягкая мебель'},{name: 'Прихожая'},{name: 'Гостиная'},{name: 'Кухня'},{name: 'Спальня'},{name: 'Детская мебель'},{name: 'Шкафы и комоды'},{name: 'Офисная мебель'},{name: 'Акции'}]
+          li.first-level
+            .first-level-name
+              span=menuslide.name
+              .level-name-icon
+                +icon('arrowmenuright')
+            .second-level
+              .second-level-header
+                .level-btn.back-to-first
+                  +icon('circlearrow')
+                .level-btn.menu-close
+                  +icon('closemenu')
+              a(href="#").second-level-name
+                span=menuslide.name
+                .level-name-icon
+                  +icon('arrowmenuright')
+              ul.menu-slided-ul
+                each jj in [1,2,3,4,5,6,7,8,9,10]
+                  li
+                    a(href="#").second-level-items
+                      span=menuslide.name + jj
+                      .level-name-icon
+                        +icon('arrowmenuright')
+      a(href="./account.html").menu-slided-account-link
+        .first-level-name
+          span Личный кабинет
+          .first-level-name-icon
+            +icon('arrowmenuright')
+    .menu-slided-contacts
+      .menu-slided-contact-wrap
+        .menu-slided-contact-name
+          span Телефон
+        .menu-slided-contact-value
+          span +7 4112 40-11-11
+      .menu-slided-contact-wrap
+        .menu-slided-contact-name
+          span Эл. почта
+        .menu-slided-contact-value
+          span Info@victoria-mebel.ru
+      .menu-slided-contact-wrap
+        a(href="#").menu-slided-contact-link
+          span Написать нам
+        a(href="#").menu-slided-contact-link
+          span Сотрудничество
+  div(class="hystmodal" id="deliveryulus" aria-hidden="true")
+    .hystmodal__wrap
+      div(class="hystmodal__window" role="dialog" aria-modal="true")
+        button(data-hystclose class="hystmodal__close")
+          | Закрыть
+        .modal-wrap.modal-delivery
+          .modal-name
+            span Заказать доставку в улус
+          .modal-delivery-text
+            span Пожалуйста, оставьте контактные данные, чтобы наш менеджер смог связаться с Вами для оформления заказа.
+          .input-std.modal-input
+            label ФИО
+              span.important-red *
+            input(type="text")
+          .input-std.modal-input
+            label Телефон
+              span.important-red *
+            input(type="phone")
+          .input-std.modal-input
+            label E-mail
+            input(type="email")
+          .modal-recapcha
+          .input-std.modal-input
+            label Введите символы, изображенные на картинке*
+            input(type="text")
+          .radio-btn.modal-radio
+            input(type="checkbox" name="soglasie" value="yes")
+            label Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных
+          .cart-user-infos-important.modal-important
+            span.important-red *
+            span обязательно для заполнения
+          .modal-btns
+            input(type="submit" value="Отправить").signin-btn.modal-btn
+  div(class="hystmodal" id="signin" aria-hidden="true")
+    .hystmodal__wrap
+      div(class="hystmodal__window" role="dialog" aria-modal="true")
+        button(data-hystclose class="hystmodal__close")
+          | Закрыть
+        .modal-wrap.modal-delivery
+          .modal-name
+            span Авторизуйтесь
+          .input-std.modal-input
+            label E-mail
+            input(type="text")
+          .input-std.modal-input
+            label Пароль
+            input(type="password")
+          .modal-radio-wrap
+            .radio-btn.modal-radio
+              input(type="checkbox" name="soglasie" value="yes")
+              label Запомнить меня
+            a(href="#")
+              span Забыли пароль?
+          .modal-btns
+            input(type="submit" value="Войти в профиль").signin-btn.modal-btn
+            a(href="#").signin-btn.modal-btn.modal-btn-signup
+              span Пройти регистрацию

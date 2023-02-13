@@ -1,0 +1,47 @@
+.catalog-types
+{
+  // @include xm
+  // {
+  //   margin: 0 -15px;
+  // }
+  margin-bottom: 55px;
+  user-select: none;
+}
+
+.type
+{
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.type-active
+{
+
+}
+.type-img
+{
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  svg
+  {
+    width: 100%;
+    stroke: #353535;
+    path, rect, line
+    {
+      stroke-width: 1.5px;
+    }
+  }
+  margin-bottom: 20px;
+}
+.type-name
+{
+  margin-bottom: 5px;
+}
+.type-slide
+{
+  width: 80px;
+}

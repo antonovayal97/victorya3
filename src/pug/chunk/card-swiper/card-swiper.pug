@@ -1,0 +1,23 @@
+mixin cardSwiper(btn = true,progress = false)
+  .card-swiper-wrap
+    .swiper.item-swiper
+      .swiper-wrapper.item-swiper-wrapper
+        .swiper-slide.item-slide
+          include ../components/card
+        .swiper-slide.item-slide
+          include ../components/card
+        .swiper-slide.item-slide
+          include ../components/card
+        .swiper-slide.item-slide
+          include ../components/card
+        .swiper-slide.item-slide
+          include ../components/card
+    if progress
+      .item-progressbar-visible.swiper-pagination
+    else
+      .item-progressbar.swiper-pagination
+    if btn
+      .swiper-button-next.swiper-buttons.swiper-buttons-next
+        +icon('carousel_nav')
+      .swiper-button-prev.swiper-buttons.swiper-buttons-prev
+        +icon('carousel_nav')
